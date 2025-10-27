@@ -14,7 +14,7 @@ function Login({ onLogin }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/login", { email, password });
+      const res = await axios.post("https://feedbackboard-backend.onrender.com/login", { email, password });
       localStorage.setItem("token", res.data.token);
       setMessage("Login successful!");
       onLogin(); 
