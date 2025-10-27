@@ -12,7 +12,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/register", { email, password });
+      await axios.post("https://feedbackboard-backend.onrender.com/register", { email, password });
       setMessage("Registration successful! Please login.");
       setEmail("");
       setPassword("");
