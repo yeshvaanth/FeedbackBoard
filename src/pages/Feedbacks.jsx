@@ -52,7 +52,7 @@ function FeedbackBoard() {
   const handleStatusChange = async (id, newStatus) => {
     try {
       const res = await axios.put(
-        `http://localhost:8080/feedbacks/${id}`,
+        `https://feedbackboard-backend.onrender.com/feedbacks/${id}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
