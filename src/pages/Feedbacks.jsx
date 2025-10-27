@@ -17,7 +17,7 @@ function FeedbackBoard() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:8080/feedbacks${status ? `?status=${status}` : ""}`,
+        `https://feedbackboard-backend.onrender.com/feedbacks${status ? `?status=${status}` : ""}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setFeedbacks(res.data);
