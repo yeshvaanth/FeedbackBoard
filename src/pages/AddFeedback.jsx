@@ -19,7 +19,7 @@ function AddFeedback() {
 
     try {
       await axios.post(
-        "http://localhost:8080/feedbacks",
+        "https://feedbackboard-backend.onrender.com/feedbacks",
         { title, description },
         { headers: { Authorization: `Bearer ${token}` } }
       );
